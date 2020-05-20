@@ -27,10 +27,16 @@ public class UserFeedActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_feed);
-       linLayout = findViewById(R.id.linLayout);
         Intent intent = getIntent();
         String username = intent.getStringExtra("username");
+
+
+        setTitle(username+"'s Photos");
+
+
+        setContentView(R.layout.activity_user_feed);
+       linLayout = findViewById(R.id.linLayout);
+
 
         ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("Image");
         query.whereEqualTo("username", username);

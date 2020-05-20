@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity implements View.OnKeyListene
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.share_menu, menu);
+
         return super.onCreateOptionsMenu(menu);
     }
     @Override
@@ -138,6 +139,7 @@ public class MainActivity extends AppCompatActivity implements View.OnKeyListene
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setTitle("Instagram");
         usernameEditText = findViewById(R.id.usernameEditText);
         passwordEditText = findViewById(R.id.passwordEditText);
         passwordEditText.setOnKeyListener(this);
